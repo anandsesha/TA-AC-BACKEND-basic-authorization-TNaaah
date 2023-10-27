@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Article = require('../models/Article');
 var Comment = require('../models/Comment');
-const auth = require('../middlewares/auth');
+var auth = require('../middlewares/auth');
 
 /* ------------- Display ALL Articles ------------- */
 router.get('/', async (req, res, next) => {
@@ -38,8 +38,8 @@ router.use(auth.loggedInUser);
 /* ------------- Add New Article ------------- */
 /* Give the client a form to add an Article */
 router.get('/new', function (req, res, next) {
-  // var flashMsg = req.flash('error')[0];
-  // console.log(flashMsg);
+  var flashMsg = req.flash('error')[0];
+  console.log(`Hereeeeeeeeeeee` + flashMsg);
   res.render('createNewArticle');
 });
 
