@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/updateArticle.css" />
+    <title>Update Single Article</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles">All Articles</a>
+      </nav>
+    </header>
+
+    <div class="update-event">
+      <h1>Update Article</h1>
+      <form action="/articles/<%= singleArticleObj._id %>/update" method="POST">
+        <label for="title">Title:</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          value="<%= singleArticleObj.title %>"
+          required
+        /><br /><br />
+
+        <label for="summary">Description (Max 20 characters):</label>
+        <input
+          type="text"
+          id="summary"
+          name="summary"
+          value="<%= singleArticleObj.description %>"
+          required
+          maxlength="20"
+        /><br /><br />
+
+        <label for="summary">Author:</label>
+        <input type="text" name="author" value="Arvind" readonly />
+
+        <a href="">
+          <button type="submit">Update Article</button>
+        </a>
+      </form>
+    </div>
+  </body>
+</html>
