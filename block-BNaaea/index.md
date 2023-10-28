@@ -17,3 +17,16 @@ Extend Assignment level 3 from prevoius chapter to
 
 - logged in admin can view list of all users
 - logged in user can block/unblock a user.
+
+<!--
+
+1. implement an admin dashboard to view all users
+
+2. add logout for both user and admin seperately.
+
+3. logged in admin can block/unblock a user.
+
+
+admin dashboard, separate login/logout and unblock handled in the next podcast application
+
+ -->
