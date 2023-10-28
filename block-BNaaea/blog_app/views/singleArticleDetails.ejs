@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/singleArticleDetails.css" />
+    <title>Single Article Details</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles">All Articles</a>
+      </nav>
+    </header>
+
+    <div class="event-details">
+      <h1><%= singleArticleObj.title %></h1>
+
+      <div class="event-info card">
+        <div class="event-left">
+          <p><strong>Summary:</strong><%= singleArticleObj.description %></p>
+           <strong>Likes:</strong>
+            <%= singleArticleObj.likes ? singleArticleObj.likes : 0 %>
+          </p>
+          <a href="/articles/<%= singleArticleObj.id %>/articleLikes">
+            <button id="likeButton">Like</button>
+          </a>
+          <a href="/articles/<%= singleArticleObj.id %>/edit">
+            <button id="editButton">Edit Article</button>
+          </a>
+          <a href="/articles/<%= singleArticleObj.id %>/delete">
+            <button id="deleteButton">Delete Article</button>
+          </a>
+        </div>
+      </div>
+      
+
+      <div class="remarks card">
+        <h2>Add Comments for this Article</h2>
+        <form
+          action="/articles/<%= singleArticleObj.id %>/comments"
+          method="post"
+          class="remark"
+        >
+          <h5>
+            <strong>Author:</strong>
+          </h5>
+          <input
+            type="text"
+            name="author"
+            value="Arvind"
+            readonly
+          />
+          <h5>
+            <strong>Comment:</strong>
+          </h5>
+          <textarea
+            name="title"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Enter your remark for this event"
+          >
+          </textarea>
+
+          <input
+            class="button"
+            style="display: block; margin: 1rem 0"
+            type="submit"
+            value="Add Comment"
+          />
+        </form>
+      </div>
+
+      <div class="all-remarks card">
+        <h2>All Remarks</h2>
+        <% singleArticleObj.comments.forEach(comment => { %>
+        <p>
+          <span><strong><%= comment.author %>:</strong></span> <%= comment.title
+          %>
+        </p>
+        <p>
+          <strong>Likes:</strong>
+          <span class="remarkLikesCount">  <%= comment.likes ? comment.likes : 0 %> </span>
+        </p>
+        <a href="/articles/<%= singleArticleObj.id %>/<%= comment.id %>/commentLike">
+          <button class="likeRemarkButton">Like</button>
+        </a>
+        <a href="/comments/<%= comment._id %>/edit">
+          <button class="editRemarkButton">Edit</button>
+        </a>
+        <a href="/comments/<%= comment._id %>/delete">
+          <button class="deleteRemarkButton">Delete</button>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+
+    <script src=""></script>
+  </body>
+</html>
