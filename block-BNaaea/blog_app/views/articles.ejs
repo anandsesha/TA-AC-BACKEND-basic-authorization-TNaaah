@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/articles.css" />
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+  </head>
+  <body>
+    <% include partials/header %>
+
+    <div class="main-content">
+      <!-- <header>
+        <a href="/articles" class="button">All Articles List</a>
+        <a href="/articles/new" class="button">Add New Article</a>
+        <a href="/users/logout" class="button"> Log Out </a>
+      </header> -->
+      <h1>List Of All Articles</h1>
+
+      <% allArticlesArray.forEach(article => { %>
+      <div class="event-card">
+        <h2><strong>Title:</strong> <%= article.title %></h2>
+        <p><strong>Summary:</strong> <%= article.description %></p>
+        <p><strong>Likes:</strong> <%= article.likes ? article.likes : 0 %></p>
+        <a class="view-button" href="/articles/<%= article.slug %>">
+          View Article
+        </a>
+      </div>
+
+      <% }); %>
+
+      <a href="#scroll-to-content" class="scroll-button">&#x2193;</a>
+    </div>
+  </body>
+</html>

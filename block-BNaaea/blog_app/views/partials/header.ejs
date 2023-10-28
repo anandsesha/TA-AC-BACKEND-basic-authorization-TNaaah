@@ -1,0 +1,33 @@
+<header>
+  <% if(user) { %>
+  <nav>
+    <a href="/users/login" style="color: aliceblue; font-weight: 900">
+      👤 <%= user.fname %>
+    </a>
+    <a href="/articles/new">
+      <button>Add Article</button>
+    </a>
+    <a href="/articles">
+      <button>View All Articles</button>
+    </a>
+    <a href="/users/logout">
+      <button>Logout</button>
+    </a>
+    <a href="/users/register">
+      <button>Register</button>
+    </a>
+  </nav>
+  <% } else { %>
+  <nav>
+    <a href="/users/login">
+      <button>LogIn</button>
+    </a>
+    <a href="/users/register">
+      <button>Register</button>
+    </a>
+    <a href="/articles">
+      <button>View All Articles</button>
+    </a>
+  </nav>
+  <% } %>
+</header>
