@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/loginForm.css" />
+    <title>User Login</title>
+  </head>
+  <body>
+    <div class="block">
+      <h1>Login</h1>
+      <% if(flashErrMsg){ %>
+      <p style="color: red; font-size: 1rem"><%= flashErrMsg %></p>
+      <% } %>
+      <form action="/users/login" method="post">
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter your email" />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>
