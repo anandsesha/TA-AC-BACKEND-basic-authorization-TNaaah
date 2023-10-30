@@ -1,0 +1,27 @@
+<header>
+  <% if(user) { %>
+  <nav>
+    <a href="/users/login" style="color: aliceblue; font-weight: 900">
+      👤 Name: <%= user.fname %> 🔏 Account: <%= user.membershipType %>
+    </a>
+    <a href="/podcasts">
+      <button>View All Podcasts</button>
+    </a>
+    <a href="/users/logout">
+      <button>Logout</button>
+    </a>
+    <a href="/users/register">
+      <button>Register</button>
+    </a>
+  </nav>
+  <% } else { %>
+  <nav>
+    <a href="/users/login">
+      <button>LogIn</button>
+    </a>
+    <a href="/users/register">
+      <button>Register</button>
+    </a>
+  </nav>
+  <% } %>
+</header>
