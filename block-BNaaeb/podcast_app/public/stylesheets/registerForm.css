@@ -1,0 +1,143 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: block;
+}
+/* Center the container vertically and horizontally */
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container styles */
+.container {
+  text-align: center;
+}
+
+h1 {
+  background-color: #fff; /* Background color for the box */
+  color: #4caf50; /* Text color */
+  padding: 10px 20px; /* Padding for the box */
+  border-radius: 5px; /* Rounded corners for the box */
+  margin: 0 0 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form container styles */
+form {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Submit button styles */
+input[type='submit'] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+input[type='submit']:hover {
+  background-color: #45a049;
+}
+
+/* Style for Membership Type dropdown */
+#membershipType {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style for "Allow Admin Access" checkbox */
+#isAdmin {
+  /* Add vertical-align property to align the checkbox and label */
+  vertical-align: middle;
+  margin-right: 5px; /* Add some margin to separate it from the label */
+  /* Customize the appearance of the checkbox */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; /* Adjust the size of the checkbox */
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Style the checkbox when it's checked */
+#isAdmin:checked {
+  background-color: #4caf50; /* Background color when checked */
+  border-color: #4caf50; /* Border color when checked */
+}
+
+/* Style the checkbox label text */
+label[for='isAdmin'] {
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: middle; /* Align label with the checkbox */
+  margin-left: 5px; /* Add some margin to separate it from the checkbox */
+  color: #333;
+}
+
+/* Style for submit button (you can customize this further) */
+input[type='submit'] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+}
+
+input[type='submit']:hover {
+  background-color: #45a049;
+}

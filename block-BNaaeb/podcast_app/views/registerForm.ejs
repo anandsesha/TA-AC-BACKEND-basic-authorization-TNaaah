@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/registerForm.css" />
+    <title>User REGISTRATION Form</title>
+  </head>
+  <body>
+    <div class="block">
+      <h1>Register User Form</h1>
+
+      <form action="/users/register" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" placeholder="Enter your First Name" />
+
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" placeholder="Enter your Last Name" />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter your email" />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter a password atleast 5 chars long"
+        />
+
+        <label for="city">City:</label>
+        <input type="text" name="city" placeholder="Enter your City" />
+
+        <!-- Membership Type -->
+        <label for="membershipType">Membership Type:</label>
+        <select id="membershipType" name="membershipType">
+          <option value="Free">Free</option>
+          <option value="VIP">VIP</option>
+          <option value="PREMIUM">PREMIUM</option>
+        </select>
+
+        <!-- Is the user an Admin? -->
+        <label for="isAdmin">Allow Admin Access</label>
+        <input type="checkbox" id="isAdmin" name="isAdmin" value="false" />
+
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+  </body>
+</html>
